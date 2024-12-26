@@ -17,14 +17,14 @@ interface post {
 export default function PostCard({post}: Props) {
     return (
         <Link href={`/postDetail?category=${post.category}&slug=${post.slug}`}>
-            <li >
-                <div >
-                    <img ></img>
+            <li className="flex flex-col border border-gray rounded-md overflow-hidden">
+                <div className="p-4">
+                    <img />
                 </div>
-                <div >
-                    <h3 >{post.title}</h3>
-                    <h4 >{transferCategoryName(post.category)}</h4>
-                    <h5 >{post.date.toLocaleDateString('ko-KR')}</h5>
+                <div className="bg-box p-4">
+                    <h3 className="text-xl text-black">{post.title}</h3>
+                    <h4 className="text-base text-black">{transferCategoryName(post.category)}</h4>
+                    <h5 className="text-xs text-black">{post.date.toLocaleDateString('ko-KR')}</h5>
                 </div>
             </li>
         </Link>

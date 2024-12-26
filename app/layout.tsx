@@ -12,7 +12,7 @@ export default function RootLayout({
     <html lang="ko">
       <body >
         <Header />
-        <main className="p-5 max-w-3xl my-0 mx-auto">{children}</main>
+        <main className="p-5 max-w-3xl min-h-screen my-0 mx-auto">{children}</main>
         <Footer />
       </body>
     </html>

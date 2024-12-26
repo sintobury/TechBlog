@@ -13,7 +13,7 @@ export default {
         secondary: "#1a2f4c",
         gray: "#e0e0e0",
         black: "#212121",
-        category: "#98bbeb",
+        box: "#98bbeb",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

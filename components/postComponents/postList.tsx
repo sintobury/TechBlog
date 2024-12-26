@@ -10,9 +10,9 @@ export default async function PostList ({category}:postListProps) {
   const postList = await getPostList(category);
   console.log(postList)
   return (
-    <section >
+    <section className="flex flex-col gap-5">
       <CategotyList category={category}/>
-      <ul >
+      <ul className="grid md:grid-cols-2 grid-cols-1 gap-8">
         {postList.map((post)=> (
           <PostCard key={post.slug} post={post}/>
         ))}

@@ -12,6 +12,8 @@ export default {
         primary: "#3d6fb3",
         secondary: "#1a2f4c",
         gray: "#e0e0e0",
+        black: "#212121",
+        category: "#98bbeb",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

@@ -11,13 +11,13 @@ export default async function CategotyList (category:CategoryProps) {
     const categoryData = await getCategoryListData();
     const allPostQuantity = await getPostQuantity();
     return (
-        <ul>
+        <ul className="flex flex-row items-center gap-4 p-4 rounded-md">
             <Link href={'/blog'}>
-                <li >{`All (${allPostQuantity})`}</li>
+                <li className={`px-3 py-4 rounded-md ${selectedCategory === undefined ? "font-bold bg-secondary text-gray" : "bg-category text-black"}`}>{`All (${allPostQuantity})`}</li>
             </Link>
             {categorylist.map((category:string)=> (
                 <Link href={`/blog/${category}`} key={category}>
-                    <li >{`${transferCategoryName(category)} (${categoryData[category]})`}</li>
+                    <li className={`px-3 py-4 rounded-md ${selectedCategory === category ? "font-bold bg-secondary text-gray" : "bg-category text-black"}` }>{`${transferCategoryName(category)} (${categoryData[category]})`}</li>
                 </Link>
             ))}
         </ul>

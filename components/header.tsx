@@ -5,9 +5,9 @@ export default function Header() {
 
     return (
         <>
-            <header >
+            <header className="flex justify-between p-4 max-w-7xl w-full bg-primary">
                 <Link href={'/'}>
-                    <h1 >{BLOG_TITLE}</h1>
+                    <h1 className="text-gray">{BLOG_TITLE}</h1>
                 </Link>
             </header>
         </>

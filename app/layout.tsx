@@ -1,5 +1,6 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
+import Provider from "@/themes/Provider";
 import "./globals.css";
 
 
@@ -11,9 +12,11 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body >
-        <Header />
-        <main className="p-5 max-w-3xl min-h-screen my-0 mx-auto">{children}</main>
-        <Footer />
+        <Provider>
+          <Header />
+          <main className="p-5 max-w-3xl min-h-screen my-0 mx-auto">{children}</main>
+          <Footer />
+        </Provider>
       </body>
     </html>
   );

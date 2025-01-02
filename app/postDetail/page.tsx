@@ -13,7 +13,7 @@ type props = {
 export default async function Post({searchParams}:props) {
   const post = await getPost(searchParams.category,searchParams.slug);
   return (
-    <div className="prose m-5">
+    <div className="prose m-5 dark:prose-invert">
       <header className="flex flex-col justify-center items-center gap-4 p-4 border-b border-gray">
         <h2 className="text-xl">{post.title}</h2>
         <Link href={`/blog/${post.category}`}>

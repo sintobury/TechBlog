@@ -19,6 +19,7 @@ export default async function Post({searchParams}:props) {
       </div>
       <div className="p-4">
         <MDXRemote source={post.content}/>
+        {/* todo: mdx plugin install & design */}
       </div>
     </div>
   )

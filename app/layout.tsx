@@ -1,6 +1,6 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
-import Provider from "@/themes/Provider";
+import Provider from "@/themes/provider";
 import "./globals.css";
 
 
@@ -10,7 +10,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <body >
         <Provider>
           <Header />

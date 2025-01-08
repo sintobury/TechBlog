@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BLOG_TITLE } from "../config/const";
+import Switch from "@/themes/switch";
 
 export default function Header() {
 
@@ -9,6 +10,7 @@ export default function Header() {
                 <Link href={'/'}>
                     <h1 className="text-gray">{BLOG_TITLE}</h1>
                 </Link>
+                <Switch/>
             </header>
         </>
     )

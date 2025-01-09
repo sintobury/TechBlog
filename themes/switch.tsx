@@ -6,27 +6,29 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from "@mui/icons-material/LightMode";
 
 export default function Switch () {
-    const [mounted, setMounted] = useState(false);
     const {theme, setTheme} = useTheme()
+    const [isLoaded, setIsLoaded] = useState(false);
 
-    useEffect(() => {
-        setMounted(true);
-    },[])
+    useEffect(()=> {
+        setIsLoaded(true);
+    })
 
-    if(!mounted) {
+    if(!isLoaded) {
         return null;
     }
 
     return (
         <>
-            {theme === 'dark' ? 
-                <div onClick={()=>setTheme('light')}>
-                    <DarkModeIcon sx={{'&:hover': { cursor:'pointer' }}}/>
-                </div> 
-                : 
-                <div onClick={()=>setTheme('dark')}>
-                    <LightModeIcon sx={{'&:hover': { cursor:'pointer' }}}/>
-                </div>}
+            {theme === 'light' &&
+            <div onClick={()=>setTheme('dark')} > 
+                <LightModeIcon sx={{'&:hover': { cursor:'pointer' }}}/>
+            </div> 
+            }
+            {theme === 'dark' &&
+            <div onClick={()=>setTheme('light')} >
+                <DarkModeIcon sx={{'&:hover': { cursor:'pointer' }}}/>
+            </div>
+            }
         </>
     )
 } 

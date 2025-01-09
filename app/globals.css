@@ -2,15 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  @apply transition-colors duration-100;
-}
+/* * {
+  @apply transition-colors duration-0;
+} */
 
 :root {
   --white: #ffffff;
   --black: #212121;
+
   --background: var(--white);
   --foreground: var(--black);
+
+  color: var(--black);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -23,6 +26,7 @@
 .dark {
   --background: var(--black);
   --foreground: var(--white);
+  color: var(--white);
 }
 
 body {

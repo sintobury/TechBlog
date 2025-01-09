@@ -16,7 +16,7 @@ export default async function Post({searchParams}:props) {
     <div className="prose m-5 dark:prose-invert">
       <header className="flex flex-col justify-center items-center gap-4 p-4 border-b border-gray">
         <h2 className="text-xl">{post.title}</h2>
-        <Link href={`/blog/${post.category}`}>
+        <Link href={`/blog/${post.category}`} className="not-prose">
           <h3 className="text-base">{transferCategoryName(post.category)}</h3>
         </Link>
         <h4 className="text-xs">{post.date.toLocaleDateString('ko-KR')}</h4>

@@ -5,6 +5,7 @@ import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
+import { MdxComponents } from "@/components/mdxComponents/mdxComponents";
 
 type props = {
   searchParams : {category: string, slug:string}
@@ -37,8 +38,9 @@ export default async function Post({searchParams}:props) {
                 // h 태그에 id부여
                 rehypeSlug]
             }
-          }}/>
-        {/* todo: mdx plugin install & design */}
+          }}
+          components={MdxComponents}
+          />
       </div>
     </div>
   )

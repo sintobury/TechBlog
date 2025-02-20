@@ -10,14 +10,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#3d6fb3",
-        secondary: "#1a2f4c",
-        gray: "#e0e0e0",
-        black: "#212121",
-        box: "#98bbeb",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        gray: "var(--gray)",
+        black: "var(--black)",
+        box: "var(--box)",
+        warn: "var(--warn)",
+        info: "var(--info)",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      typography: {
+        DEFAULT: {
+          css:{
+            '.callout-text > p': {
+              margin: 0,
+            }
+          }
+        }
+      }
     },
   },
   plugins: [require('@tailwindcss/typography')],

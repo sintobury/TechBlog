@@ -9,11 +9,20 @@
 :root {
   --white: #ffffff;
   --black: #212121;
+  --gray: #e0e0e0;
 
   --background: var(--white);
   --foreground: var(--black);
 
+  --primary: #3d6fb3;
+  --secondary: #1a2f4c;
+
+  --box: #98bbeb;
+  --warn: #fef3c7;
+  --info: #e0f2fe;
+
   color: var(--black);
+
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -26,6 +35,11 @@
 .dark {
   --background: var(--black);
   --foreground: var(--white);
+
+  --box: #1a4786;
+  --warn: #d8b800;
+  --info: #1175c7;
+
   color: var(--white);
 }
 

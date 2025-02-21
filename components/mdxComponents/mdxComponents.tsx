@@ -1,9 +1,9 @@
 import { MDXComponents } from 'mdx/types'
 import { Callout } from './callout'
-import { Image } from './image'
+import { MdxImage } from './image'
 
 export const MdxComponents : MDXComponents = {
-    img: Image,
+    img: MdxImage,
     blockquote:Callout,
     Callout,
 } 

@@ -4,10 +4,11 @@ import { sync } from 'glob'
 import matter from 'gray-matter'
 
 type postMatter = {
-    title:string;
-    date:Date;
-    description:string;
-    slug:string;
+    title: string;
+    date: Date;
+    description: string;
+    slug: string;
+    thumbnail: string;
 }
 
 const basepath = '/posts'

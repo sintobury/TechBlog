@@ -55,7 +55,7 @@ export const Callout = (props: CalloutProps) => {
     const calloutData = designData[type]
     const CalloutIcon = calloutData.icon;
     return  (
-        <div className={`flex items-center gap-3 rounded-md px-4 py-3 ${calloutData.boxCss}`}>
+        <div className={`flex items-center gap-3 rounded-md px-4 py-3 my-4 ${calloutData.boxCss}`}>
             {type !== 'block' && (
                 <div>
                     <CalloutIcon />

@@ -36,6 +36,8 @@
   --background: var(--black);
   --foreground: var(--white);
 
+  --gray: #e0e0e095;
+
   --box: #1a4786;
   --warn: #d8b800;
   --info: #1175c7;

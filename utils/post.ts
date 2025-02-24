@@ -78,3 +78,21 @@ export const transferCategoryName = (category:string) => {
     const transferedName = category.replace('_',' ')
     return transferedName;
 }
+
+export const parseId = (content:string) => {
+    const regex = /^(##|###) (.*$)/gim;
+    const hTagList = content.match(regex);
+    return (
+        hTagList?.map((hTag:string) => ({
+            id:"#"+
+                hTag.replace("# ","")
+                    .replace("#","")
+                    .replace(/[\[\]:!@#$/%^&*()+=,.]/g,"")
+                    .replace(/ /g,"-")
+                    .toLowerCase()
+                    .replace("?",""),
+            text: hTag.replace("##","").replace("#",""),
+            tag:hTag.match(/#/g)?.length || 3
+        })) || []
+    )
+}

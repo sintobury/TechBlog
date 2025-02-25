@@ -1,6 +1,7 @@
 'use client'
 import { useObserver } from "@/utils/observer"
 import Link from "next/link";
+import { ScrollTopButton } from "./scrollTopButton";
 
 interface Props {
     idList: HtagIdList[]
@@ -14,13 +15,11 @@ interface HtagIdList {
 
 export const Sidebar = ({idList} :Props) => {
     const observedIdList = useObserver('h2, h3');
-
-    console.log(observedIdList, idList);
     return (
-        <aside className="not-prose absolute -top-[200px] left-full -mb-[100px] hidden h-[calc(100%+150px)] xl:block">
-            <div className="sticky bottom-0 top-[200px] z-10 ml-[5rem] mt-[200px] w-[200px]">
-                <div className="mb-4 border-l px-4 py-2">
-                    <span>on this page</span>
+        <aside className="not-prose absolute -top-[320px] left-full h-[calc(100%+160px)] hidden xl:block">
+            <div className="sticky z-10 top-[200px] ml-[5rem] w-[200px]">
+                <div className="mb-4 border-l-gray border-l px-4 py-2">
+                    <span className="text-sm">Summary</span>
                     <ul className="text-xs">
                         {idList.map((element) => {
                             const isH3 = element.tag === 3;
@@ -42,7 +41,7 @@ export const Sidebar = ({idList} :Props) => {
                     </ul>
                 </div>
                 <div className="flex gap-2">
-                        {/* 사이드바 버튼 만들기 */}
+                    <ScrollTopButton />
                 </div>
             </div>
         </aside>

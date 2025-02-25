@@ -28,7 +28,7 @@ export default async function Post({searchParams}:props) {
         </Link>
         <span className="text-xs">{post.date.toLocaleDateString('ko-KR')}</span>
       </header>
-      <div className="relative">
+      <article className="relative">
         <div className="p-4">
           <MDXRemote 
             source={post.content} 
@@ -47,10 +47,10 @@ export default async function Post({searchParams}:props) {
               }
             }}
             components={MdxComponents}
-            />
-          <Sidebar idList={hTagIdList} />
+          />
         </div>
-      </div>
+        <Sidebar idList={hTagIdList} />
+      </article>
     </div>
   )
 }

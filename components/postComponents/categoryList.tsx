@@ -14,7 +14,7 @@ export default async function CategotyList (category:CategoryProps) {
         <ul className="flex flex-row items-center gap-4 p-4 rounded-md">
             <Link href={'/blog'}>
                 <li className={`px-3 py-4 rounded-md ${selectedCategory === undefined ? 
-                    "font-bold bg-secondary text-gray dark:bg-box dark:text-black" :
+                    "font-bold bg-secondary text-gray dark:bg-box dark:text-white" :
                     "bg-box text-black dark:bg-white"}`}>
                         {`All (${allPostQuantity})`}
                 </li>
@@ -22,7 +22,7 @@ export default async function CategotyList (category:CategoryProps) {
             {categorylist.map((category:string)=> (
                 <Link href={`/blog/${category}`} key={category}>
                     <li className={`px-3 py-4 rounded-md ${selectedCategory === category ?
-                        "font-bold bg-secondary text-gray dark:bg-box dark:text-black" :
+                        "font-bold bg-secondary text-gray dark:bg-box dark:text-white" :
                         "bg-box text-black dark:bg-white"}` }>
                             {`${transferCategoryName(category)} (${categoryData[category]})`}
                     </li>

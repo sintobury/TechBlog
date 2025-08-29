@@ -16,7 +16,7 @@ interface HtagIdList {
 export const Sidebar = ({idList} :Props) => {
     const observedIdList = useObserver('h2, h3');
     return (
-        <aside className="not-prose absolute -top-[320px] left-full h-[calc(100%+160px)] hidden xl:block">
+        <aside className="not-prose absolute -top-[320px] left-full h-[calc(100%+160px)] hidden xl:block transition-none">
             <div className="sticky z-10 top-[200px] ml-[5rem] w-[200px]">
                 <div className="mb-4 border-l-gray border-l px-4 py-2">
                     <span className="text-sm">Summary</span>

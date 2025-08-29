@@ -38,14 +38,14 @@ export default function Switch () {
     return (
         <>
             {theme === 'light' &&
-            <div onClick={()=>setTheme('dark')} className="hover:cursor-pointer"> 
+            <button onClick={()=>setTheme('dark')} className="hover:cursor-pointer"> 
                 <LightModeIcon />
-            </div> 
+            </button> 
             }
             {theme === 'dark' &&
-            <div onClick={()=>setTheme('light')} className="hover:cursor-pointer" >
+            <button onClick={()=>setTheme('light')} className="hover:cursor-pointer" >
                 <DarkModeIcon />
-            </div>
+            </button>
             }
         </>
     )

@@ -23,7 +23,7 @@ export default async function Post({searchParams}:props) {
         <Image width={100} height={100} src={post.thumbnail} alt={`${post.title} thumbnail`} 
         style={{width:'100%',  height:'auto'}} priority className="rounded-md my-0"/>
         <h1 className="text-xl">{post.title}</h1>
-        <Link href={`/blog/${post.category}`} className="not-prose">
+        <Link href={`/blog/${post.category}`} className="not-prose transition-none">
           <span className="text-base">{transferCategoryName(post.category)}</span>
         </Link>
         <span className="text-xs">{post.date.toLocaleDateString('ko-KR')}</span>

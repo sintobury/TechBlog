@@ -45,6 +45,14 @@ html {
   scroll-behavior: smooth;
 }
 
-html.theme-ready * {
+html.theme-ready {
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.prose {
+  transition: inherit !important;
+}
+
+.not-prose, .not-prose * {
+  transition: inherit !important;
 }

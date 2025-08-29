@@ -11,7 +11,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" suppressHydrationWarning>
-      <body >
+      <body className="transition-colors duration-300">
           <Provider>
             <Header />
             <main className="p-5 max-w-3xl min-h-screen my-0 mx-auto">{children}</main>
